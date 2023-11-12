@@ -160,6 +160,10 @@ const Products = (props) => {
     return newTotal;
   };
   // TODO: implement the restockProducts function
+
+  // idk what happened with the url variable, but it had a value of 
+  // "http://localhost:1337/api/productshttp://localhost:1337/api/products" 
+  // and i don't have time for figuring out why.
   const restockProducts = (url) => {
     axios.get("http://localhost:1337/api/products")
       .then((response) => {

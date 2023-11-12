@@ -107,8 +107,8 @@ const Products = (props) => {
     doFetch(query);
   };
   const deleteCartItem = (index) => {
-    let newCart = cart.filter((item, i) => index != i);
-    setCart(newCart);
+    let newCart = cart.filter((item, i) => index != i)
+    setCart([...cart, newCart]);
   };
   const photos = ["apple.png", "orange.png", "beans.png", "cabbage.png"];
 
@@ -172,7 +172,7 @@ const Products = (props) => {
           const instock = item.attributes.instock
           return { name, country, cost, instock }
         })
-        setItems([...items, ...myResIntoItems])
+        setItems([ ...myResIntoItems])
       })
   };
 
